@@ -15,9 +15,9 @@ const User = require("../models/User"); // EST CE NECESSAIRE
 
 const cloudinary = require("cloudinary").v2;
 cloudinary.config({
-  cloud_name: "dursyc66w",
-  api_key: "187155376285278",
-  api_secret: "fJQbb7DlxiwQFYOnRajIqnRxzFE",
+  cloud_name: process.env.CLOUD_NAME,
+  api_key: process.env.API_KEY,
+  api_secret: process.env.API_SECRET,
 });
 
 const convertToBase64 = (file) => {
