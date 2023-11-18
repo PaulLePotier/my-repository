@@ -17,6 +17,14 @@ router.get("/users", isAuthenticated, async (req, res) => {
   }
 });
 
+router.get("/testlive", (req, res) => {
+  try {
+    res.send("Hello todos");
+  } catch (error) {
+    res.status(500).send();
+  }
+});
+
 router.post("/signup", async (req, res) => {
   try {
     const existingUser = await User.findOne({ email: req.body.email });
