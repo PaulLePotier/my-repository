@@ -11,6 +11,7 @@ app.use(express.json());
 app.use(cors());
 
 mongoose.connect(process.env.MONGODB_URI);
+// mongoose.connect("mongodb://localhost:27017/Vinted");
 
 const userRoutes = require("./routes/user");
 app.use(userRoutes);
