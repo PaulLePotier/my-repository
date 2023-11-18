@@ -23,7 +23,7 @@ app.all("*", (req, res) => {
   res.status(401).json({ message: "pas de route" });
 });
 
-app.listen(process.env.PORT || 8080, () => {
+app.listen(process.env.PORT || 3000, () => {
   console.log("Server started");
 });
 
