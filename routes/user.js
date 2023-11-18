@@ -40,7 +40,7 @@ router.post("/signup", async (req, res) => {
           salt: salt,
         });
 
-        newUser.save(newUser.email, token); // Comment sauvegarder avec SAVEUSER
+        newUser.save(); // Comment sauvegarder avec SAVEUSER
         //   await saveUser(account, email, token, hash, salt);
         res.json({
           _id: newUser._id, // Comment faire ca
